@@ -8,4 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: Inter, sans-serif;
   }
+
+  * {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 `;

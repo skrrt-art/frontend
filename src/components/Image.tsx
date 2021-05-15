@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 type Props = {
-  className?: string,
-  src?: string,
-}
+  className?: string;
+  src?: string;
+};
 
 export const Image: React.FC<Props> = ({ className, src }) => (
-   <Container className={className}>
+  <Container className={className}>
     <Cover src={src} />
     <Shadow className="blurred-shadow" src={src} />
   </Container>

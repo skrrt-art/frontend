@@ -7,14 +7,14 @@ export const Footer = () => {
         <strong>2021 Skrrt Foundation™</strong>
       </Copywhat>
     </Container>
-  )
+  );
 };
 
 const Container = styled.footer`
-padding-bottom: 120px;
+  padding-bottom: 120px;
 `;
 
 const Copywhat = styled.span`
   font-size: 1.25rem;
-  color: #957AF1;
+  color: #957af1;
 `;

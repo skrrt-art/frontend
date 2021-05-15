@@ -13,27 +13,38 @@ export const App = () => {
   return (
     <Container>
       <Title>
-        Skrrt Foundation™<br />
-        Blockchain <TitleSegment>for Fun,</TitleSegment><br />
+        Skrrt Foundation™
+        <br />
+        Blockchain <TitleSegment>for Fun,</TitleSegment>
+        <br />
         Finance <TitleSegment>for All.</TitleSegment>
       </Title>
       <Image src={SquirtleImage} />
       <Title>
-        Buy<br />
-        Trade<br />
-        <GradientText>SKRRT</GradientText> Token on<br />
-        <UniswapLogo /><br />
+        Buy
+        <br />
+        Trade
+        <br />
+        <GradientText>SKRRT</GradientText> Token on
+        <br />
+        <UniswapLogo />
+        <br />
         Soon
       </Title>
       <Title>
-        Keep up your<br />
+        Keep up your
+        <br />
         Interests here
       </Title>
       <SocialContainer>
         <a href="https://github.com/skrrt-art" target="_blank" rel="noreferrer">
           <Image src={GitHubAppIcon} />
         </a>
-        <a href="https://instagram.com/skrrt.foundation" target="_blank" rel="noreferrer">
+        <a
+          href="https://instagram.com/skrrt.foundation"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Image src={InstagramAppIcon} />
         </a>
       </SocialContainer>
@@ -86,7 +97,7 @@ const TitleSegment = styled.span`
 `;
 
 const GradientText = styled.span`
-  background: -webkit-linear-gradient(-64deg, #80E4F1, #957AF1);
+  background: -webkit-linear-gradient(-64deg, #80e4f1, #957af1);
   background-clip: text;
   filter: saturate(140%);
   -webkit-background-clip: text;
@@ -124,4 +135,4 @@ const SocialContainer = styled.div`
       margin-right: 32px;
     }
   }
-`
+`;

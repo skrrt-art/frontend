@@ -11,6 +11,7 @@ export const Footer = () => {
 };
 
 const Container = styled.footer`
+  padding-top: 100px;
   padding-bottom: 120px;
 `;
 

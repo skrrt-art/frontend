@@ -112,7 +112,19 @@ const UniswapLogo = styled.img.attrs({
 
 const SocialContainer = styled.div`
   display: flex;
-  padding-bottom: 100px;
+
+  @media (max-width: 900px) {
+    transform-origin: top;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: 600px) {
+    transform: scale(0.65);
+  }
+
+  @media (max-width: 450px) {
+    transform: scale(0.45);
+  }
 
   & > a {
     & > div {

@@ -1,8 +1,13 @@
 import styled from 'styled-components';
 
+import { Image } from './components/Image';
+import { Footer } from './components/Footer';
+
 import BackgroundGradientImage from './images/landing/background-gradient.jpg';
 import UniswapLogoImage from './images/landing/uniswap-logo.png';
 import SquirtleImage from './images/landing/squirtle.png';
+import GitHubAppIcon from './images/landing/github-app-icon.png';
+import InstagramAppIcon from './images/landing/instagram-app-icon.png';
 
 export const App = () => {
   return (
@@ -10,18 +15,29 @@ export const App = () => {
       <Title>
         Skrrt Foundation™<br />
         Blockchain <TitleSegment>for Fun,</TitleSegment><br />
-        Blockchain <TitleSegment>for All.</TitleSegment>
+        Finance <TitleSegment>for All.</TitleSegment>
       </Title>
-      <SquirtleContainer>
-        <Squirtle />
-        <SquirtleShadow />
-      </SquirtleContainer>
+      <Image src={SquirtleImage} />
       <Title>
         Buy<br />
         Trade<br />
         <GradientText>SKRRT</GradientText> Token on<br />
-        <UniswapLogo />
+        <UniswapLogo /><br />
+        Soon
       </Title>
+      <Title>
+        Keep up your<br />
+        Interests here
+      </Title>
+      <SocialContainer>
+        <a href="https://github.com/skrrt-art" target="_blank" rel="noreferrer">
+          <Image src={GitHubAppIcon} />
+        </a>
+        <a href="https://instagram.com/skrrt.foundation" target="_blank" rel="noreferrer">
+          <Image src={InstagramAppIcon} />
+        </a>
+      </SocialContainer>
+      <Footer />
     </Container>
   );
 };
@@ -69,41 +85,6 @@ const TitleSegment = styled.span`
   display: inline-block;
 `;
 
-const SquirtleContainer = styled.div`
-  width: 256px;
-  height: 256px;
-  position: relative;
-`;
-const Squirtle = styled.img.attrs({
-  src: SquirtleImage,
-})`
-  width: 256px;
-  height: 256px;
-  filter: saturate(128%);
-  border-radius: 48px;
-  z-index: 9;
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border: 8px solid rgba(255, 255, 255, 0.2);
-`;
-const SquirtleShadow = styled.img.attrs({
-  src: SquirtleImage,
-})`
-  position: absolute;
-  width: 312px;
-  height: 312px;
-  top: -28px;
-  left: -28px;
-  right: -28px;
-  bottom: -28px;
-  filter: saturate(128%) blur(24px);
-  border-radius: 48px;
-  opacity: 0.8;
-`;
-
 const GradientText = styled.span`
   background: -webkit-linear-gradient(-64deg, #80E4F1, #957AF1);
   background-clip: text;
@@ -117,3 +98,30 @@ const UniswapLogo = styled.img.attrs({
 })`
   width: 80%;
 `;
+
+const SocialContainer = styled.div`
+  display: flex;
+  padding-bottom: 100px;
+
+  & > a {
+    & > div {
+      cursor: pointer;
+
+      & > img.blurred-shadow {
+        transition: all 0.2s ease-in-out;
+        filter: saturate(128%) blur(96px);
+        opacity: 0.9;
+      }
+
+      &:hover {
+        & > img.blurred-shadow {
+          filter: saturate(128%) blur(56px);
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+`
